@@ -21,6 +21,7 @@ public class SplashActivity extends BaseActivity {
         handler = new CommonHandler(message -> {
             if (isAlive()) {
                 IntentUtil.startActivity(this, MainActivity.class);
+                finish();
             }
         });
         handler.sendEmptyMessageDelayed(0, 3000);
