@@ -1,21 +1,22 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         google()
         jcenter()
-        
+
+        apply from: 'config.gradle'
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.2'
-
+        classpath "com.android.tools.build:gradle:$pluginVersion"
     }
 }
 
 allprojects {
     repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         google()
         jcenter()
-        
     }
 }
 
