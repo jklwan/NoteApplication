@@ -15,7 +15,7 @@ import java.util.List;
  * @author chends create on 2019/7/23.
  */
 public abstract class BaseAdapter<T> extends RecyclerView.Adapter<BaseHolder<T>> {
-    private Context context;
+    protected Context context;
     private List<T> mList = new ArrayList<>();
     private BaseListener<T> itemClickLister;
 
