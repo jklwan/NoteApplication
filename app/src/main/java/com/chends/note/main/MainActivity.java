@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.chends.note.R;
 import com.chends.note.base.BaseActivity;
+import com.chends.note.business.ToastActivity;
 import com.chends.note.recyclerview.RecyclerDecorationActivity;
 import com.chends.note.utils.DisplayUtil;
 import com.chends.note.utils.IntentUtil;
@@ -39,6 +40,7 @@ public class MainActivity extends BaseActivity {
     private List<MainBean> getData() {
         List<MainBean> list = new ArrayList<>();
         list.add(new MainBean("RecyclerView分割线", RecyclerDecorationActivity.class));
+        list.add(new MainBean("Toast提示", ToastActivity.class));
         return list;
     }
 
