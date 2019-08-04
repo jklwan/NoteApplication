@@ -1,14 +1,17 @@
 package com.chends.note.base;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.chends.note.utils.ContextUtil;
+import com.chends.note.utils.LanguageUtil;
 import com.chends.note.utils.LogUtils;
 
 /**
@@ -75,6 +78,21 @@ public abstract class BaseActivity extends AppCompatActivity {
         return ContextUtil.isAlive(this);
     }
 
+    @Override
+    public void setTitle(int titleId) {
+        super.setTitle(titleId);
+    }
+
+    @Override
+    public void setTitle(CharSequence title) {
+        super.setTitle(title);
+    }
+
+    @Override
+    public void setSupportActionBar(@Nullable Toolbar toolbar) {
+        super.setSupportActionBar(toolbar);
+    }
+
     @SuppressWarnings("RestrictedApi")
     @Override
     public void startActivityForResult(Intent intent, int requestCode, @Nullable Bundle options) {
@@ -114,5 +132,10 @@ public abstract class BaseActivity extends AppCompatActivity {
         mActivityJumpTime = SystemClock.uptimeMillis();
         LogUtils.d("startActivitySelfCheck " + result + ", tag:" + mActivityJumpTag + ",time:" + mActivityJumpTime);
         return result;
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LanguageUtil.attachBaseContext(newBase));
     }
 }

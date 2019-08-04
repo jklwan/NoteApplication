@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NoteApp</string>
+
+    <string name="mainTitle">首頁</string>
+    <string name="auto">與系統同步</string>
+    <string name="language">語言</string>
+    <string name="save">儲存</string>
+</resources>

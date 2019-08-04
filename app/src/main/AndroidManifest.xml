@@ -24,13 +24,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:label="Main"
             android:name=".main.MainActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:label="RecyclerView"
             android:name=".recyclerview.RecyclerDecorationActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:label="Toast"
             android:name=".business.ToastActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:label="Language"
+            android:name=".business.LanguageActivity"
             android:screenOrientation="portrait" />
     </application>
 

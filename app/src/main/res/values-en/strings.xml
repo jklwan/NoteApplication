@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NoteApp</string>
+
+    <string name="mainTitle">Main</string>
+    <string name="auto">Auto</string>
+    <string name="language">Language</string>
+    <string name="save">Save</string>
+</resources>
