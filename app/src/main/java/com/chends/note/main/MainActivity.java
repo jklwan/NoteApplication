@@ -11,6 +11,8 @@ import com.chends.note.base.Constant;
 import com.chends.note.business.LanguageActivity;
 import com.chends.note.business.ToastActivity;
 import com.chends.note.recyclerview.RecyclerDecorationActivity;
+import com.chends.note.recyclerview.RecyclerSideActivity;
+import com.chends.note.recyclerview.RecyclerSideInViewPagerActivity;
 import com.chends.note.utils.DisplayUtil;
 import com.chends.note.utils.IntentUtil;
 import com.chends.note.utils.ItemDecoration;
@@ -46,6 +48,8 @@ public class MainActivity extends BaseActivity {
         list.add(new MainBean("RecyclerView分割线", RecyclerDecorationActivity.class));
         list.add(new MainBean("Toast提示", ToastActivity.class));
         list.add(new MainBean("多语言", LanguageActivity.class));
+        list.add(new MainBean("RecyclerView侧滑", RecyclerSideActivity.class));
+        list.add(new MainBean("RecyclerView侧滑（在ViewPager中）", RecyclerSideInViewPagerActivity.class));
         return list;
     }
 

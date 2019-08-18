@@ -49,6 +49,6 @@ public class RecyclerDecorationActivity extends BaseActivity {
 
     @Override
     protected int getLayoutRes() {
-        return R.layout.activity_recycler_decoration;
+        return R.layout.activity_recycler_view;
     }
 }

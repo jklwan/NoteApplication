@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          package="com.chends.note">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.chends.note">
 
     <application
         android:name=".NoteApp"
@@ -15,8 +15,8 @@
 
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,21 +24,31 @@
             </intent-filter>
         </activity>
         <activity
-            android:label="Main"
             android:name=".main.MainActivity"
+            android:label="Main"
             android:screenOrientation="portrait" />
         <activity
-            android:label="RecyclerView"
             android:name=".recyclerview.RecyclerDecorationActivity"
+            android:label="RecyclerView"
             android:screenOrientation="portrait" />
         <activity
-            android:label="Toast"
             android:name=".business.ToastActivity"
+            android:label="Toast"
             android:screenOrientation="portrait" />
         <activity
-            android:label="Language"
             android:name=".business.LanguageActivity"
+            android:label="Language"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".recyclerview.RecyclerSideActivity"
+            android:label="RecyclerSideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".recyclerview.RecyclerSideInViewPagerActivity"
+            android:label="RecyclerSideInViewPagerActivity"
+            android:screenOrientation="portrait" />
+
+
     </application>
 
 </manifest>
