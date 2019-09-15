@@ -1,0 +1,38 @@
+android {
+    flavorDimensions("app")
+    productFlavors {
+        abc {}
+        qq {}
+        xiaomi {}
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def apkName = "app_${variant.productFlavors[0].name}_${buildType.name}_v${defaultConfig.versionName}"
+            if (buildType.name.toLowerCase().contains("release")) {
+                outputFileName = "../../../apks/${variant.versionName}/" + apkName + ".apk"
+            } else {
+                outputFileName = apkName + ".apk"
+            }
+        }
+        // 第二种方式时，拷贝文件的方式
+/*        def obj
+        if (variant.hasProperty('assembleProvider')) {
+            obj = variant.assembleProvider.get()
+        } else {
+            obj = variant.assemble
+        }
+        obj.doLast { assemble ->
+            println("assemble:${assemble}")
+            if (assemble.name.toLowerCase().contains("release")) {
+                copy {
+                    from variant.outputs*.outputFile
+                    into "./build/apks/${variant.versionName}"
+                }
+            }
+            //if you don't want to delete the file after copying it comment the line below
+            // 可以选择删除或保留当前文件夹下的apk
+            //delete variant.outputs*.outputFile
+        }*/
+    }
+}
+

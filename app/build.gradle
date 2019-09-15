@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply from: 'multiple-channel.gradle'
 
 android {
     compileSdkVersion 28
@@ -18,9 +19,21 @@ android {
         //javaMaxHeapSize '4g'
         keepRuntimeAnnotatedClasses = false
     }
-
-    buildTypes {
+    signingConfigs {
         release {
+            storeFile file('note.jks')
+            storePassword 'noteapp'
+            keyAlias = 'note'
+            keyPassword 'noteapp'
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+        }
+        release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
