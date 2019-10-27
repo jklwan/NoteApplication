@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.viewbinding.ViewBinding;
 
 import com.chends.note.utils.ContextUtil;
 import com.chends.note.utils.LanguageUtil;
@@ -18,8 +19,9 @@ import com.chends.note.utils.LogUtils;
  * base
  * @author chends create on 2019/7/23.
  */
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity<T extends ViewBinding> extends AppCompatActivity {
     private int mUiVisibility = 0;
+    protected T viewBinding;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,11 +29,22 @@ public abstract class BaseActivity extends AppCompatActivity {
             fullScreen();
         }
         super.onCreate(savedInstanceState);
-        setContentView(getLayoutRes());
+        if (getLayoutRes() > 0) {
+            setContentView(getLayoutRes());
+        } else {
+            initViewBinding();
+            setContentView(viewBinding.getRoot());
+        }
         ContextUtil.setOverScroll(this);
     }
 
-    protected abstract int getLayoutRes();
+    protected int getLayoutRes() {
+        return 0;
+    }
+
+    protected void initViewBinding(){
+
+    }
 
     private int getUiVisibility() {
         if (mUiVisibility == 0) {

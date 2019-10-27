@@ -14,7 +14,7 @@ android {
                 outputFileName = apkName + ".apk"
             }
         }
-        // 第二种方式时，拷贝文件的方式
+        // 第二种方式是，拷贝文件的方式
 /*        def obj
         if (variant.hasProperty('assembleProvider')) {
             obj = variant.assembleProvider.get()

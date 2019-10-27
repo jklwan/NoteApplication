@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity">
+    tools:context="com.chends.note.SplashActivity"
+    tools:viewBindingIgnore="true">
 
 </FrameLayout>

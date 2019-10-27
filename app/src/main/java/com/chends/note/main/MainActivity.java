@@ -10,6 +10,7 @@ import com.chends.note.base.BaseActivity;
 import com.chends.note.base.Constant;
 import com.chends.note.business.LanguageActivity;
 import com.chends.note.business.ToastActivity;
+import com.chends.note.business.ViewBindingActivity;
 import com.chends.note.recyclerview.RecyclerDecorationActivity;
 import com.chends.note.recyclerview.RecyclerSideActivity;
 import com.chends.note.recyclerview.RecyclerSideInViewPagerActivity;
@@ -50,6 +51,7 @@ public class MainActivity extends BaseActivity {
         list.add(new MainBean("多语言", LanguageActivity.class));
         list.add(new MainBean("RecyclerView侧滑", RecyclerSideActivity.class));
         list.add(new MainBean("RecyclerView侧滑（在ViewPager中）", RecyclerSideInViewPagerActivity.class));
+        list.add(new MainBean("ViewBinding", ViewBindingActivity.class));
         return list;
     }
 

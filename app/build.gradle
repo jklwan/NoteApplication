@@ -11,6 +11,10 @@ android {
         versionName "1.0"
 
         resConfigs("zh-rCN","zh-rTW","en")
+
+        viewBinding {
+            enabled = true
+        }
     }
 
     dexOptions {

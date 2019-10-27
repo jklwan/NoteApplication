@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:orientation="horizontal"
-    tools:scrollX="120dp">
+    tools:scrollX="120dp"
+    tools:viewBindingIgnore="true">
 
     <TextView
         android:id="@+id/title"

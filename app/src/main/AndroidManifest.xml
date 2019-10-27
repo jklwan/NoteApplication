@@ -14,7 +14,7 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name=".SplashActivity"
+            android:name="com.chends.note.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -48,7 +48,10 @@
             android:label="RecyclerSideInViewPagerActivity"
             android:screenOrientation="portrait" />
 
-
+        <activity
+            android:name=".business.ViewBindingActivity"
+            android:label="ViewBinding"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
